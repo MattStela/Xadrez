@@ -147,3 +147,19 @@ img{
     font-size: 85%;
     font-weight: bold;
 }
+
+#theme{
+    background-color: rgb(190, 120, 15);
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 5%;
+}
+
+#theme:hover{
+    cursor: pointer;
+    background-color: rgb(151, 97, 15);
+    border: 0px;
+    font-size: 85%;
+    font-weight: bold;
+}

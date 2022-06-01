@@ -181,5 +181,44 @@ function trocarLados() {
     torre_pretas.src = "./images/pieces/Piece=Rook, Side=" + side2 + ".png";
 }
 
+function trocarTema() {
+    const body = document.querySelector("body");
+    var brancas = document.querySelectorAll(".white");
+    var pretas = document.querySelectorAll(".black");
+    var array_pretas = [...pretas];
+    var array_brancas = [...brancas];
+    var button_theme = document.getElementById("theme");
+
+    if (button_theme.innerHTML == "Tema 1") {
+        button_theme.innerHTML = "Tema 2";
+        button_theme.style.backgroundColor = "rgb(15, 75, 93)";
+        button_theme.style.color = "white";
+        body.style.backgroundColor = "#5C420A";
+        body.style.color = "#000000";
+
+        array_pretas.forEach(preta => {
+            preta.style.backgroundColor = "#271E05";
+        })
+        array_brancas.forEach(branca => {
+            branca.style.backgroundColor = "#CA9015";
+        })
+        
+    } else if (button_theme.innerHTML == "Tema 2") {
+        button_theme.innerHTML = "Tema 1";
+        button_theme.style.backgroundColor = "rgb(190, 120, 15)";
+        button_theme.style.color = "black";
+        body.style.backgroundColor = "rgb(15, 75, 93)";
+        body.style.color = "white";
+
+        array_pretas.forEach(preta => {
+            preta.style.backgroundColor = "black";
+        })
+
+        array_brancas.forEach(branca => {
+            branca.style.backgroundColor = "white";
+        })
+    }
+}
+
 //===================================================
 
