@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="board">
         <div class="rows">
@@ -32,7 +34,7 @@
                 <div class="nums">1</div>
             </div>
 
-        <!-- Aqui começa as posições -->
+            <!-- Aqui começa as posições -->
             <div id="positions">
                 <div class="cols">
                     <div id="pos_a8" class="pos white"></div>
@@ -117,8 +119,12 @@
             </div>
         </div>
     </div>
+    <div id="buttons">
+        <button onclick="comecar()" id="start">Começar</button>
+        <button onclick="trocarLados()" id="trade">Trocar lados</button>
+    </div>
 
-    <button onclick="comecar()" id="start">Começar</button>
     <script src="./index.js"></script>
 </body>
+
 </html>

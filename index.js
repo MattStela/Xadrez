@@ -1,6 +1,77 @@
 
 //pega todas as peças pela tag <img>
-var imagens = document.getElementsByTagName('img');
+const imagens = document.getElementsByTagName('img');
+
+var side1 = "White";
+var side2 = "Black";
+
+const peao1_brancas = document.createElement("img");
+const peao2_brancas = document.createElement("img");
+const peao3_brancas = document.createElement("img");
+const peao4_brancas = document.createElement("img");
+const peao5_brancas = document.createElement("img");
+const peao6_brancas = document.createElement("img");
+const peao7_brancas = document.createElement("img");
+const peao8_brancas = document.createElement("img");
+const torre2_brancas = document.createElement("img");
+const cavalo2_brancas = document.createElement("img");
+const bispo2_brancas = document.createElement("img");
+const rei_brancas = document.createElement("img");
+const rainha_brancas = document.createElement("img");
+const bispo_brancas = document.createElement("img");
+const cavalo_brancas = document.createElement("img");
+const torre_brancas = document.createElement("img");
+
+peao1_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao2_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao3_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao4_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao5_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao6_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao7_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+peao8_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+torre2_brancas.src = "./images/pieces/Piece=Rook, Side=" + side1 + ".png";
+cavalo2_brancas.src = "./images/pieces/Piece=Knight, Side=" + side1 + ".png";
+bispo2_brancas.src = "./images/pieces/Piece=Bishop, Side=" + side1 + ".png";
+rei_brancas.src = "./images/pieces/Piece=King, Side=" + side1 + ".png";
+rainha_brancas.src = "./images/pieces/Piece=Queen, Side=" + side1 + ".png";
+bispo_brancas.src = "./images/pieces/Piece=Bishop, Side=" + side1 + ".png";
+cavalo_brancas.src = "./images/pieces/Piece=knight, Side=" + side1 + ".png";
+torre_brancas.src = "./images/pieces/Piece=Rook, Side=" + side1 + ".png";
+
+const peao1_pretas = document.createElement("img");
+const peao2_pretas = document.createElement("img");
+const peao3_pretas = document.createElement("img");
+const peao4_pretas = document.createElement("img");
+const peao5_pretas = document.createElement("img");
+const peao6_pretas = document.createElement("img");
+const peao7_pretas = document.createElement("img");
+const peao8_pretas = document.createElement("img");
+const torre2_pretas = document.createElement("img");
+const cavalo2_pretas = document.createElement("img");
+const bispo2_pretas = document.createElement("img");
+const rei_pretas = document.createElement("img");
+const rainha_pretas = document.createElement("img");
+const bispo_pretas = document.createElement("img");
+const cavalo_pretas = document.createElement("img");
+const torre_pretas = document.createElement("img");
+
+peao1_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao2_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao3_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao4_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao5_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao6_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao7_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+peao8_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+torre2_pretas.src = "./images/pieces/Piece=Rook, Side=" + side2 + ".png";
+cavalo2_pretas.src = "./images/pieces/Piece=Knight, Side=" + side2 + ".png";
+bispo2_pretas.src = "./images/pieces/Piece=Bishop, Side=" + side2 + ".png";
+rei_pretas.src = "./images/pieces/Piece=King, Side=" + side2 + ".png";
+rainha_pretas.src = "./images/pieces/Piece=Queen, Side=" + side2 + ".png";
+bispo_pretas.src = "./images/pieces/Piece=Bishop, Side=" + side2 + ".png";
+cavalo_pretas.src = "./images/pieces/Piece=knight, Side=" + side2 + ".png";
+torre_pretas.src = "./images/pieces/Piece=Rook, Side=" + side2 + ".png";
 
 //zera o tabuleiro
 function zeraOTabuleiro() {
@@ -19,39 +90,6 @@ function comecar() {
     zeraOTabuleiro();
 
     //================== ORGANIZA AS BRANCAS ==================
-    const peao1_brancas = document.createElement("img");
-    const peao2_brancas = document.createElement("img");
-    const peao3_brancas = document.createElement("img");
-    const peao4_brancas = document.createElement("img");
-    const peao5_brancas = document.createElement("img");
-    const peao6_brancas = document.createElement("img");
-    const peao7_brancas = document.createElement("img");
-    const peao8_brancas = document.createElement("img");
-    const torre2_brancas = document.createElement("img");
-    const cavalo2_brancas = document.createElement("img");
-    const bispo2_brancas = document.createElement("img");
-    const rei_brancas = document.createElement("img");
-    const rainha_brancas = document.createElement("img");
-    const bispo_brancas = document.createElement("img");
-    const cavalo_brancas = document.createElement("img");
-    const torre_brancas = document.createElement("img");
-
-    peao1_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao2_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao3_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao4_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao5_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao6_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao7_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    peao8_brancas.src = "./images/pieces/Piece=Pawn, Side=White.png";
-    torre2_brancas.src = "./images/pieces/Piece=Rook, Side=White.png";
-    cavalo2_brancas.src = "./images/pieces/Piece=Knight, Side=White.png";
-    bispo2_brancas.src = "./images/pieces/Piece=Bishop, Side=White.png";
-    rei_brancas.src = "./images/pieces/Piece=King, Side=White.png";
-    rainha_brancas.src = "./images/pieces/Piece=Queen, Side=White.png";
-    bispo_brancas.src = "./images/pieces/Piece=Bishop, Side=White.png";
-    cavalo_brancas.src = "./images/pieces/Piece=knight, Side=White.png";
-    torre_brancas.src = "./images/pieces/Piece=Rook, Side=White.png";
 
     document.getElementById("pos_h1").appendChild(torre2_brancas);
     document.getElementById("pos_g1").appendChild(cavalo2_brancas);
@@ -71,39 +109,6 @@ function comecar() {
     document.getElementById("pos_h2").appendChild(peao8_brancas);
 
     //================== ORGANIZA AS PRETAS ==================
-    const peao1_pretas = document.createElement("img");
-    const peao2_pretas = document.createElement("img");
-    const peao3_pretas = document.createElement("img");
-    const peao4_pretas = document.createElement("img");
-    const peao5_pretas = document.createElement("img");
-    const peao6_pretas = document.createElement("img");
-    const peao7_pretas = document.createElement("img");
-    const peao8_pretas = document.createElement("img");
-    const torre2_pretas = document.createElement("img");
-    const cavalo2_pretas = document.createElement("img");
-    const bispo2_pretas = document.createElement("img");
-    const rei_pretas = document.createElement("img");
-    const rainha_pretas = document.createElement("img");
-    const bispo_pretas = document.createElement("img");
-    const cavalo_pretas = document.createElement("img");
-    const torre_pretas = document.createElement("img");
-
-    peao1_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao2_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao3_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao4_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao5_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao6_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao7_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    peao8_pretas.src = "./images/pieces/Piece=Pawn, Side=Black.png";
-    torre2_pretas.src = "./images/pieces/Piece=Rook, Side=Black.png";
-    cavalo2_pretas.src = "./images/pieces/Piece=Knight, Side=Black.png";
-    bispo2_pretas.src = "./images/pieces/Piece=Bishop, Side=Black.png";
-    rei_pretas.src = "./images/pieces/Piece=King, Side=Black.png";
-    rainha_pretas.src = "./images/pieces/Piece=Queen, Side=Black.png";
-    bispo_pretas.src = "./images/pieces/Piece=Bishop, Side=Black.png";
-    cavalo_pretas.src = "./images/pieces/Piece=knight, Side=Black.png";
-    torre_pretas.src = "./images/pieces/Piece=Rook, Side=Black.png";
 
     document.getElementById("pos_a8").appendChild(torre_pretas);
     document.getElementById("pos_b8").appendChild(cavalo_pretas);
@@ -130,4 +135,51 @@ function comecar() {
         i++;
     }
 }
+
+function trocarLados() {
+
+    if (side1 == "White") {
+        side1 = "Black";
+        side2 = "White";
+    } else {
+        side1 = "White";
+        side2 = "Black";
+    }
+
+    peao1_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao2_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao3_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao4_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao5_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao6_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao7_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    peao8_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
+    torre2_brancas.src = "./images/pieces/Piece=Rook, Side=" + side1 + ".png";
+    cavalo2_brancas.src = "./images/pieces/Piece=Knight, Side=" + side1 + ".png";
+    bispo2_brancas.src = "./images/pieces/Piece=Bishop, Side=" + side1 + ".png";
+    rei_brancas.src = "./images/pieces/Piece=King, Side=" + side1 + ".png";
+    rainha_brancas.src = "./images/pieces/Piece=Queen, Side=" + side1 + ".png";
+    bispo_brancas.src = "./images/pieces/Piece=Bishop, Side=" + side1 + ".png";
+    cavalo_brancas.src = "./images/pieces/Piece=knight, Side=" + side1 + ".png";
+    torre_brancas.src = "./images/pieces/Piece=Rook, Side=" + side1 + ".png";
+
+    peao1_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao2_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao3_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao4_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao5_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao6_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao7_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    peao8_pretas.src = "./images/pieces/Piece=Pawn, Side=" + side2 + ".png";
+    torre2_pretas.src = "./images/pieces/Piece=Rook, Side=" + side2 + ".png";
+    cavalo2_pretas.src = "./images/pieces/Piece=Knight, Side=" + side2 + ".png";
+    bispo2_pretas.src = "./images/pieces/Piece=Bishop, Side=" + side2 + ".png";
+    rei_pretas.src = "./images/pieces/Piece=King, Side=" + side2 + ".png";
+    rainha_pretas.src = "./images/pieces/Piece=Queen, Side=" + side2 + ".png";
+    bispo_pretas.src = "./images/pieces/Piece=Bishop, Side=" + side2 + ".png";
+    cavalo_pretas.src = "./images/pieces/Piece=knight, Side=" + side2 + ".png";
+    torre_pretas.src = "./images/pieces/Piece=Rook, Side=" + side2 + ".png";
+}
+
+//===================================================
 

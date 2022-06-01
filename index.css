@@ -103,14 +103,47 @@ img{
 }
 
 #start{
-    margin: 80px;
     background-color: green;
     width: 100px;
     height: 35px;
     border-radius: 50px;
-    margin-left: 75px;
+    margin: 5%;
+}
+
+#start:hover{
+    cursor: pointer;
+    background-color: rgb(5, 168, 5);
+    border: 0px;
+    font-size: 85%;
+    font-weight: bold;
 }
 
 .movendo{
     background-color:rgb(11, 94, 44);
+}
+
+#buttons{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#trade{
+    background-color: rgb(185, 190, 12);
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 5%;
+}
+
+#trade:hover{
+    cursor: pointer;
+    background-color: rgb(147, 152, 10);
+    border: 0px;
+    font-size: 85%;
+    font-weight: bold;
 }
