@@ -7,7 +7,6 @@ const imagens = document.getElementsByTagName('img');
 //pega todas as posições do tabuleiro e põe em array
 const positions = [...document.querySelectorAll(".pos")];
 
-// positions[0].firstChild.src.replace("http://127.0.0.1:5500/images/pieces/Piece=","").replace(",%20Side="," ").replace(".png"," on ")
 var side1 = "White";
 var side2 = "Black";
 
@@ -45,6 +44,7 @@ const bispo_pretas = document.createElement("img");
 const cavalo_pretas = document.createElement("img");
 const torre_pretas = document.createElement("img");
 
+//seta o caminho da imagem de cada peça
 function setSource() {
     peao1_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
     peao2_brancas.src = "./images/pieces/Piece=Pawn, Side=" + side1 + ".png";
@@ -92,6 +92,7 @@ function zeraOTabuleiro() {
     }
 }
 
+//só seta as peças brancas e pretas em suas devidas casas
 function organizaPecas(){
     //================== ORGANIZA AS BRANCAS ==================
 
@@ -151,6 +152,7 @@ function comecar() {
     moverPecas();
 }
 
+//movimentação de peças
 function moverPecas() {
 
     const arrastaveis = document.querySelectorAll("[draggable='true']");
