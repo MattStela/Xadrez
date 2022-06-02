@@ -94,7 +94,7 @@ body{
 }
 
 .white{
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(255, 255, 255);
 }
 
 img{
@@ -162,4 +162,24 @@ img{
     border: 0px;
     font-size: 85%;
     font-weight: bold;
+}
+
+#init{
+    background-color: rgb(129, 15, 123);
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 5%;
+}
+
+#init:hover{
+    cursor: pointer;
+    background-color: rgb(179, 23, 171);
+    border: 0px;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.hover{
+    background-color: green;
 }

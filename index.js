@@ -1,7 +1,13 @@
+//pega a tag <body>
+const body = document.querySelector("body");
 
 //pega todas as peças pela tag <img>
 const imagens = document.getElementsByTagName('img');
 
+//pega todas as posições do tabuleiro e põe em array
+const positions = [...document.querySelectorAll(".pos")];
+
+// positions[0].firstChild.src.replace("http://127.0.0.1:5500/images/pieces/Piece=","").replace(",%20Side="," ").replace(".png"," on ")
 var side1 = "White";
 var side2 = "Black";
 
@@ -86,12 +92,7 @@ function zeraOTabuleiro() {
     }
 }
 
-// ao clicar no botão começar, executa
-function comecar() {
-
-    zeraOTabuleiro();
-    setSource();
-
+function organizaPecas(){
     //================== ORGANIZA AS BRANCAS ==================
 
     document.getElementById("pos_h1").appendChild(torre2_brancas);
@@ -130,6 +131,14 @@ function comecar() {
     document.getElementById("pos_f7").appendChild(peao6_pretas);
     document.getElementById("pos_g7").appendChild(peao7_pretas);
     document.getElementById("pos_h7").appendChild(peao8_pretas);
+}
+
+// ao clicar no botão começar, executa
+function comecar() {
+
+    zeraOTabuleiro();
+    setSource();
+    organizaPecas();
 
     //seta o atributo draggable = true em todas as tag imagens
     var i = 0;
@@ -137,6 +146,54 @@ function comecar() {
         imagens[i].setAttribute("draggable", "true");
         i++;
     }
+
+    identificarPosicaoDasPecas();
+    moverPecas();
+}
+
+function moverPecas() {
+
+    const arrastaveis = document.querySelectorAll("[draggable='true']");
+    const containerSoltar = document.querySelectorAll(".pos");
+
+    arrastaveis.forEach((peca) => {
+        peca.addEventListener("dragstart", dragstart);
+    })
+
+    function dragstart() {
+        this.classList.add("arrastando");
+    }
+    containerSoltar.forEach((casa) => {
+        casa.addEventListener("dragover", dragover);
+        casa.addEventListener("dragleave", dragleave);
+    })
+
+    function dragover() {
+        this.style.backgroundColor="rgb(44, 105, 23)";
+        const elementoArrastado = document.querySelector(".arrastando");
+        this.appendChild(elementoArrastado);
+    }
+
+    function dragleave(){
+        this.style.backgroundColor="";
+        // att 02/06 - pegar o id do parentNode e colocar no console.log pra ver a casa que cada peça está se movendo
+    }
+}
+
+/* identifica todas as peças do tabuleiro quando a função é
+ativada e põe toda a informação em um array */
+function identificarPosicaoDasPecas() {
+    positions.forEach((position, index) => {
+        if (position.firstChild == null) {
+            positions[index] = position.id.replace("pos_", "");
+        } else {
+            positions[index] = position.firstChild.src
+                .split("=")[1].replace(",%20Side", " ")
+                + position.firstChild.src
+                    .split("=")[2].replace(".png", " ")
+                + position.id.replace("pos_", "");
+        }
+    });
 }
 
 // troca os lados das brancas e pretas
@@ -155,11 +212,8 @@ function trocarLados() {
 
 //troca o tema geral entre tema 1 ou tema 2
 function trocarTema() {
-    const body = document.querySelector("body");
-    var brancas = document.querySelectorAll(".white");
-    var pretas = document.querySelectorAll(".black");
-    var array_pretas = [...pretas];
-    var array_brancas = [...brancas];
+    var array_pretas = [...document.querySelectorAll(".black")];
+    var array_brancas = [...document.querySelectorAll(".white")];
     var button_theme = document.getElementById("theme");
 
     if (button_theme.innerHTML == "Tema 1") {
@@ -192,6 +246,4 @@ function trocarTema() {
         })
     }
 }
-
-//===================================================
 
